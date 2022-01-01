@@ -10,3 +10,5 @@ Goto qb-inventory -> html -> js -> app.js, and then Ctrl+F to find and remove th
 ```
 
 Don't forget to remove the closing brackets
+
+Credits to NathanERP's qb-durability for the idea
