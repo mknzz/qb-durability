@@ -16,6 +16,7 @@ TriggerServerEvent('qb-durability:server:RemoveItemQuality', remove, itemname)
 ```
 
 Quick preview - https://gyazo.com/57dbbefb0f85ed4df038996b54d7faba
+
 Quick preview manually removing quality - https://gyazo.com/3f0c2adba09e6f10dbaa1e7bf0d2d8e1
 
 Credits to NathanERP's qb-durability for the idea
