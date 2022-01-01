@@ -2,8 +2,8 @@ Config = Config or {}
 
 Config.Interval = 1 --how often durability will be removed in minutes
 
-Config.DurabilityAmount = { --how durability will be removed after the interval
-    ["default"]                = 0.1,
+Config.DurabilityAmount = { --how much durability will be removed after the interval
+    ["default"]                = 0.1,--this is for any item that hasn't been added to this list
     ["sandwich"]                = 3,
     ["coffee"]                  = 3,
     ["water"]                   = 3,
