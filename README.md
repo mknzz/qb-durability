@@ -1,6 +1,6 @@
 # qb-durability
 
-A very simple durability degrading system for QB
+A very simple item degrading system for QB
 
 Goto qb-inventory -> html -> js -> app.js, and then Ctrl+F to find and remove the following lines
 
