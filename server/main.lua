@@ -1,8 +1,7 @@
 
 local QBCore = exports['qb-core']:GetCoreObject()
 
-RegisterServerEvent("qb-durability:server:ItemQuality")
-AddEventHandler("qb-durability:server:ItemQuality", function(data, hp)
+RegisterServerEvent("qb-durability:server:ItemQuality", function(data, hp)
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     if not Player then return end
@@ -13,10 +12,7 @@ AddEventHandler("qb-durability:server:ItemQuality", function(data, hp)
             if Config.DurabilityAmount[itemSlot.name] ~= nil then
                 amount = Config.DurabilityAmount[itemSlot.name]
             end
-
-            if Player.PlayerData.items[i].info.quality == nil then
-                Player.PlayerData.items[i].info.quality = 100
-            else
+            if Player.PlayerData.items[i].info.quality ~= nil then
                 Player.PlayerData.items[i].info.quality = Player.PlayerData.items[i].info.quality - amount
                 print(itemSlot.name.." removed "..amount.." durability")
                 if Player.PlayerData.items[i].info.quality <= 0.0 or Player.PlayerData.items[i].info.quality <= 0 then
@@ -24,14 +20,15 @@ AddEventHandler("qb-durability:server:ItemQuality", function(data, hp)
                     print(itemSlot.name.." removed ")
                     return
                 end
+            else
+                Player.PlayerData.items[i].info.quality = 100
             end
             Player.Functions.SetInventory(Player.PlayerData.items)
         end
     end
 end)
 
-RegisterServerEvent("qb-durability:server:RemoveItemQuality")
-AddEventHandler("qb-durability:server:RemoveItemQuality", function(hp, name)
+RegisterServerEvent("qb-durability:server:RemoveItemQuality", function(hp, name)
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     if not Player then return end
