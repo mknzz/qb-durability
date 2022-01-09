@@ -21,7 +21,7 @@ Replace with this:
             info = {
                 serie = tostring(QBCore.Shared.RandomInt(2) .. QBCore.Shared.RandomStr(3) .. QBCore.Shared.RandomInt(1) .. QBCore.Shared.RandomStr(2) .. QBCore.Shared.RandomInt(3) .. QBCore.Shared.RandomStr(4)),
             }
-        else 
+        elseif info == nil then
             info = {
                 quality = 100
             }
@@ -43,3 +43,6 @@ Quick preview - https://gyazo.com/57dbbefb0f85ed4df038996b54d7faba
 Quick preview manually removing quality - https://gyazo.com/3f0c2adba09e6f10dbaa1e7bf0d2d8e1
 
 Credits to NathanERP's qb-durability for the idea
+
+A better solution for item degrading - https://github.com/JoeSzymkowiczFiveM/qb-decay
+
